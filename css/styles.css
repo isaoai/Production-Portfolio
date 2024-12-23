@@ -1,0 +1,879 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter';
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #332F2F;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 50px 5%;
+    text-align: right;
+    background-color: #332F2F;
+    z-index: 1000; 
+}
+
+nav {
+    display: flex;
+    float: right;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+nav ul .divider{
+
+    text-shadow: 4px 4px 6px black;
+
+}
+
+nav ul li a {
+
+    color: white;
+    transition: 0.3s ease;
+
+}
+
+.navbar span{
+
+    color: white;
+    text-shadow: 4px 4px 6px black;
+
+}
+
+.navbar a:hover{
+
+    color: orange;
+
+}
+
+.navbar a.active{
+
+    background-color: #B85353;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+
+}
+
+.toggle_btn {
+
+    font-size: 30px;
+    display: none;
+}
+
+.dropdown_menu li {
+    display: none;
+}
+
+.dropdown_menu a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/*
+
+    Home section
+
+*/
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    background-color: #332F2F;
+    padding: 25px 10% 0;
+}
+
+.home-page {
+    margin: 0 auto;
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content {
+    margin: 0 auto;
+}
+
+.home-content h1{
+    color: hsl(0, 0%, 90%);
+    font-family: 'Kanit';
+    font-size: 80px;
+    text-shadow: 2px 2px 4px #f1ecec;
+}
+
+
+.home-content span{
+    color: #B85353;
+    font-family: 'Kanit';
+    font-size: 80px;
+    text-shadow: 3px 3px 6px #B85353;
+}
+
+
+.home-content h3{
+    font-family: 'Gotu';
+    font-size: 25px;
+    color: hsl(0, 0%, 90%);
+}
+
+.button-resume {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+.home-content button{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 3px 5px 2px rgb(32, 32, 32);
+    color: white;
+    font-size: 30px;
+    width: 300px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+
+.home-page img {
+    width: 490px;
+    height: 510px;
+    border-radius: 40%;
+    box-shadow: 4px 2px rgba(80, 76, 76, 0.3);
+}
+
+
+
+.home-content button:hover {
+    background-color: orange;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b95555;
+    border-radius: 10px;
+}
+
+/*
+
+    About section
+
+*/
+
+.experience-information ul {
+    list-style-type: circle;
+    padding-left: 10px;
+}
+
+
+.about {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    padding: 150px 10% 0;
+    background-color: #332F2F;
+}
+
+.about-page {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.about-header i {
+    font-size: 40px;
+}
+
+.about-header h1 {
+    font-weight: 800;
+    color: white;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.about-content .about-info {
+    color: white;
+    font-size: 25px;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 30px;
+}
+
+.soc-med-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.soc-med-container i {
+    font-size: 25px;
+    color: white;
+}
+
+.soc-med-container i:hover {
+    color: orange;
+}
+
+.education-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 10px 5px rgb(32, 32, 32);
+    padding: 25px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.experience-information,
+.education-information {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.exp-content {
+    border: 0.5px solid rgb(245, 238, 238);
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 3px rgb(32, 32, 32);
+}
+
+.experience-information h2,
+.education-content h2 {
+    font-size: 25px;
+}
+
+.experience-information .company,
+.education-content .school {
+    font-size: 20px;
+}
+
+.experience-information .work-year,
+.education-content .year {
+    font-size: 16px;
+}
+
+.experience-content li,p, .education-content p {
+    padding-top: 5px;
+    line-height: 1.3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.exp-content {
+    display: flex;
+    gap: 3.5rem;
+    padding: 25px;
+}
+
+/*
+
+    Credentials section
+
+*/
+
+.credentials {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 5% 0;
+    background-color: #332F2F;
+}
+
+.credentials-section {
+    margin: 0 auto;
+}
+
+.credentials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 150px;
+    gap: 1.5rem;
+}
+
+.header-content i {
+    font-size: 40px; 
+}
+
+.header-content .sub {
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.credentials-card {
+    width: 400px;
+    background-color: #161838;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px rgb(32, 32, 32);
+}
+
+.credentials-card img {
+    padding: 0;
+    width: 400px;
+    height: 300px;
+}
+
+.credentials-content {
+    padding: 16px;
+}
+
+.credentials-content h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.credentials-content h5 {
+    margin-bottom: 2px;
+    color: white;
+}
+
+.credentials-content p {
+    color: white;
+    font-size: 13px;
+    line-height: 1.3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*
+
+    Projects Section
+
+*/
+
+.projects {
+    
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10% 0;
+    background-color: #332F2F
+}
+
+.project-section {
+    margin: 0 auto;
+}
+
+.technology-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+
+.technology-card {
+    width: 120px;
+    background-color: none;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px rgb(32, 32, 32);
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+.technology-card p{
+    padding-bottom: 15px;
+    color: white;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 0.5rem;
+}
+
+.project-container {
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+}
+
+
+.project-container h3 {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.project-container h4 {
+    font-weight: lighter;
+}
+
+.project-container span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.project-container h4 {
+    font-size: 15px;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-container p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 8px;
+}
+
+.project-container .view-code {
+    padding-left: 10px;
+}
+
+.techno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 15px;
+}
+
+.techno p {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+.techno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 15px;
+}
+
+.techno-1 p {
+    background-color: rgb(88, 90, 88);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #332F2F;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 13px;
+}
+
+footer span {
+    color: rgb(205, 236, 134);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1; 
+}
+
+
+@media screen and (max-width: 1900px) {
+
+
+    .home-page img{
+        width: 470px;
+        height: 400px;
+      }
+
+    .about-content .about-info {
+        font-size: 20px;
+    }
+
+    .header-content i,
+    .header-content .sub,
+    .about-header i,
+    .about-header h1{
+        font-size: 30px; 
+    }
+
+    .education-content img {
+        margin: 0 auto;
+    }
+
+}
+
+
+@media screen and (max-width: 1500px) {
+    
+    nav ul {
+        gap: 2rem;
+    }
+
+
+    .home-page img{
+        width: 400px;
+        height: 400px;
+      }
+
+    .home-content h1,
+    .home-content span{
+        font-size: 65px;
+    }
+
+
+    .home-content h3{
+        font-size: 20px;
+    }
+
+
+    .education-content .school,
+    .experience-information .company {
+        font-size: 16px;
+    }
+    
+    .education-content .year,
+    .experience-information .work-year {
+        font-size: 14px;
+    }
+
+    .education-content h2,
+    .experience-information h2 {
+        font-size: 18px;
+    }
+
+    .experience-content li,p, .education-content p {
+        font-size: 12px;
+        font-weight: lighter;
+    }
+    
+}
+
+@media screen and (max-width: 1235px) {
+
+    .header {
+        background-color: transparent;
+    }
+
+    .home-page img{
+        width: 370px;
+        height: 400px;
+    }
+
+    .home-page {
+        gap: 3em;
+    }
+    
+    .main-nav {
+        font-size: 12px;
+    }  
+    
+    .toggle_btn {
+        visibility: visible;
+        display: block;
+        font-size: 20px;
+        background-color: #454546;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .home-content h1,
+    .home-content span{
+        font-size: 60px;
+    }
+
+    .home-content h3{
+        font-size: 15px;
+    }
+
+    .dropdown_menu {
+        position: absolute;
+        right: 2.5rem;
+        top: 100px;
+        width: 350px;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        visibility: visible;
+        height: 0;
+    }
+    
+    
+    .dropdown_menu.open {
+        height: 180px;
+    }
+
+
+    .dropdown_menu a:hover {
+        color: orange
+    }
+
+    .dropdown_menu.open li {
+        visibility: visible;
+    }
+
+
+    .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+    }
+    
+    
+    nav .dropdown_menu {
+        display: block;
+    }
+
+
+    .main-nav {
+        display: none;
+    }  
+
+
+    .credentials-card {
+        width: 350px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 10px 10px 5px rgb(32, 32, 32);
+    }
+
+    .credentials-card img {
+        padding: 0;
+        width: 350px;
+        height: 250px;
+    }
+
+    .education-content img {
+        margin: 0 auto;
+    }
+
+
+    .technology-card p{
+        font-size: 10px;
+    }
+
+
+    .header-content i,
+    .header-content .sub,
+    .about-header i,
+    .about-header h1 {
+        font-size: 25px; 
+    }
+    
+    .about-content .about-info {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .home-page img{
+        width: 340px;
+        height: 380px;
+    }
+
+    .home-content h1,
+    .home-content span{
+        font-size: 55px;
+    }
+
+    .home-content .button-resume .btn-resume{
+        font-size: 15px;
+        width: 180px;
+    }
+
+    .education-content h2, 
+    .experience-information h2,
+    .home-content h3,
+    .project-container h3 {
+        font-size: 14px;
+    }
+    
+    .education-content .school,
+    .experience-information .company {
+        font-size: 13px;
+    }
+    
+    .experience-information .work-year,
+    .credentials-content p,
+    .education-content .year, 
+    .project-container p,
+    .project-container span,
+    .project-container .techno p {
+        font-size: 11px;
+    }
+
+    .credentials-content h3, 
+    .par, 
+    .credentials-content h5,
+    .project-container h4 {
+        font-size: 12px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .home-page img{
+        width: 280px;
+        height: 300px;
+    }
+
+    
+    .home-page {
+        gap: 1em;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-resume {
+        margin-top: 10px;
+    }
+
+    .home-content .btn-resume {
+        width: 200px;
+    }
+
+    .home-content h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .home-content span{
+        font-size: 40px;
+    }
+
+
+    .home-content h3{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .home-content button{
+        font-size: 15px;
+        width: 200px;
+    }
+
+
+    .header-content i,
+    .header-content .sub,
+    .about-header i,
+    .about-header h1 {
+        font-size: 20px; 
+    }
+
+    .about-content .about-info {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .home-page{
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    .credentials-card {
+        width: 250px;
+        border-radius: 8px;
+    }
+
+    .dropdown_menu {
+        width: 250px;
+    }
+
+    .credentials-card img {
+        padding: 0;
+        width: 250px;
+        height: 200px;
+    }
+
+}
+
